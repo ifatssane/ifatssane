@@ -32,13 +32,17 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
 
                 int rand1 = (int)(6.0 * Math.random()) + 1;
-                affichage_de.setText(Integer.toString(rand1));
+                affichage_de.setText(Integer.toString(rollDice(6)));
 
                 int rand2 = (int)(6.0 * Math.random()) + 1;
-                deuxieme_de.setText(Integer.toString(rand2));
+                deuxieme_de.setText(Integer.toString(rollDice(6)));
 
 
             }
         });
+    }
+
+    private int rollDice(int nombre_face){
+        return (int)(nombre_face * Math.random()) + 1;
     }
 }
